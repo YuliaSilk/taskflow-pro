@@ -10,22 +10,17 @@
         "use": "@vercel/node"
       }
     ],
-    "routes": [
+    "rewrites": [
       {
-        "src": "/api/(.*)",
-        "dest": "server/index.ts"
+        "source": "/api/(.*)",
+        "destination": "/server/index.ts"
       },
       {
-        "src": "/(.*)",
-        "dest": "src/index.tsx"
+        "source": "/(.*)",
+        "destination": "/src/index.tsx"
       }
     ],
     "env": {
       "NODE_ENV": "production"
-    },
-    
-        "rewrites": [
-          { "source": "/(.*)", "destination": "/api/index.ts" }
-        ]
-      
+    }
   }
