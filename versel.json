@@ -10,7 +10,12 @@
     "routes": [
       {
         "src": "/api/*",
-        "dest": "server.ts"
+        "dest": "dist/index.js"
       }
-    ]
+    ],
+    "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+    }
   }
