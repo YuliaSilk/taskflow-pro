@@ -6,18 +6,8 @@
         "use": "@vercel/static-build"
       },
       {
-        "src": "server/index.ts",
+        "src": "server/src/index.ts",
         "use": "@vercel/node"
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "/server/src/index.ts"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/src/index.tsx"
       }
     ],
     "env": {
